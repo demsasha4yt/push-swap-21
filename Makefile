@@ -2,11 +2,15 @@ EXECUTABLE1=push_swap
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
+IFLAGS=-I ./includes -I ./libft/includes
 LDFLAGS=
 
 LIBFT_DIR=./libft
+LIBFT_INCLUDE_DIR=$(LIBFT_DIR)/includes
+INCLUDE_DIR=./includes
 
-SRCS =		main.c
+SRCS =		main.c\
+			src/push_swap.c
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 
@@ -19,10 +23,10 @@ $(EXECUTABLE1): $(OBJS)
 	@echo "===>$(EXECUTABLE1) has been builded"
 
 libft:
-	
+
 
 %.o: %.c
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ -c $< 
+	$(CC) $(LDFLAGS) $(IFLAGS) $(CFLAGS) -o $@ -c $<
 
 clean:
 

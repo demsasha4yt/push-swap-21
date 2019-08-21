@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 19:44:52 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/21 20:17:58 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/21 20:19:22 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv){
+int push_swap_main(int argc, char **argv){
 	(void)argc;
 	(void)argv;
+	return 0;
 }
