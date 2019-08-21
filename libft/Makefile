@@ -107,21 +107,21 @@ OBJS = $(patsubst %.c,%.o, $(SRCS))
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 
 
 %.o: %.c
-	gcc $(FLAGS) $(DEBUG_FLAGS) $(CFLAGS) -o $@ -c $< 
+	@gcc $(FLAGS) $(DEBUG_FLAGS) $(CFLAGS) -o $@ -c $< 
 
 clean:
-	rm -rf $(OBJS)
+	@rm -rf $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
 test: re
-	gcc -g -o main main.c -L. -lftprintf
+	@gcc -g -o main main.c -L. -lftprintf
 	echo "\n\n\n"
 	./main
