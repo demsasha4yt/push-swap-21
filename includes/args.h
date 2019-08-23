@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   args.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 22:39:07 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 22:28:50 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 22:29:45 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef ARGS_H
+# define ARGS_H
 
-int		push_swap_main(int argc, char **argv)
-{
-	t_pswap		pswap;
-	int			ret;
+# include "t_stack.h"
+# include "t_pswap.h"
 
-	ret = 0;
-	ret += initialize_push_swap(&pswap, argc, argv);
-	if (ret != 0)
-	{
-		ft_printf("Error\n");
-		exit(ret);
-	}
-	ret = algo_sort_start(&pswap);
-	if (ret != 0)
-	{
-		ft_printf("Error\n");
-		exit(ret);
-	}
-	destroy_stack(&pswap.a);
-	destroy_stack(&pswap.b);
-	return (0);
-}
+int		initialize_args(t_pswap *pswap, int argc, char **argv);
+int		is_valid_arg(char *arg);
+int		is_valid_number(char *arg);
+int		is_arg_already_exist(t_stack *a, int arg);
+
+#endif

@@ -23,6 +23,7 @@ SRCS =		src/main_ps.c\
 			src/args/initialize.c\
 			src/push_swap/push_swap.c\
 			src/push_swap/push_swap_init.c\
+			src/push_swap/algo.c\
 
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
