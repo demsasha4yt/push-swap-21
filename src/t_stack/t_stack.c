@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:02:54 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 16:30:51 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 22:19:28 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	destroy_values_stack(int *values)
 
 void	destroy_stack(t_stack *entity)
 {
+	if (entity->values == NULL)
+		return;
 	destroy_values_stack(entity->values);
 	entity->values = NULL;
 	entity->size_available = 0;

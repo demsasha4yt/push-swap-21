@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:35:01 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 21:59:04 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 22:10:15 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ int		rotate(t_stack *entity)
 
 	top = 0;
 	tmp = 0;
-	initialize_basic_stack(&tmp_stack, DEFAULT_STACK_SIZE);
+	if ((initialize_basic_stack(&tmp_stack, DEFAULT_STACK_SIZE)))
+		return (1);
 	pop(entity, &top);
 	while (!stack_is_empty(entity))
 	{
@@ -74,7 +75,8 @@ int		rrotate(t_stack *entity)
 
 	top = 0;
 	tmp = 0;
-	initialize_basic_stack(&tmp_stack, DEFAULT_STACK_SIZE);
+	if ((initialize_basic_stack(&tmp_stack, DEFAULT_STACK_SIZE)))
+		return (1);
 	while (!stack_is_empty(entity))
 	{
 		pop(entity, &tmp);
