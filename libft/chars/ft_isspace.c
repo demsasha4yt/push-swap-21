@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_pswap.h                                          :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/23 18:07:53 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 19:00:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 19:14:57 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 19:15:44 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_PSWAP_H
-# define T_PSWAP_H
-# include "t_stack.h"
-
-# define PFUNCTION_COUNT 11
-
-typedef struct		s_pswap
+int		ft_isspace(int c)
 {
-	t_stack			a;
-	t_stack			b;
-	int				(*psfuncs[PFUNCTION_COUNT])\
-					(struct s_pswap*);
-	int				debug_mode;
-}					t_pswap;
-
-#endif
+	c = (unsigned char)c;
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+		|| c == ' ')
+		return (1);
+	return (0);
+}

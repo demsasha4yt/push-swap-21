@@ -15,6 +15,7 @@ SRCS =		./chars/ft_chtostr.c\
 			./chars/ft_putchar_fd.c\
 			./chars/ft_tolower.c\
 			./chars/ft_toupper.c\
+			./chars/ft_isspace.c\
 			./double/ft_ldtoa.c\
 			./double/ft_ldtoa_utils.c\
 			./ft_printf/buff_utils.c\
@@ -92,6 +93,7 @@ SRCS =		./chars/ft_chtostr.c\
 			./str/ft_strstr.c\
 			./str/ft_strsub.c\
 			./str/ft_strtrim.c\
+			./str/ft_isnumeric.c\
 			./widechars/ft_putwchar.c\
 			./widechars/ft_putwchar_fd.c\
 			./widechars/ft_putwnchar.c\

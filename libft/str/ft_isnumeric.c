@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_pswap.h                                          :+:      :+:    :+:   */
+/*   ft_isnumeric.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/23 18:07:53 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 19:00:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 19:08:52 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 19:37:42 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_PSWAP_H
-# define T_PSWAP_H
-# include "t_stack.h"
+#include "libft.h"
 
-# define PFUNCTION_COUNT 11
-
-typedef struct		s_pswap
+int	ft_isnumeric(const char *str)
 {
-	t_stack			a;
-	t_stack			b;
-	int				(*psfuncs[PFUNCTION_COUNT])\
-					(struct s_pswap*);
-	int				debug_mode;
-}					t_pswap;
+	if (str == NULL || *str == '\0' || ft_isspace(*str))
+		return (0);
 
-#endif
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str)
+	{
+		if (!ft_isdigit(*str))
+			return (0);
+		str++;
+	}
+	return (1);
+}

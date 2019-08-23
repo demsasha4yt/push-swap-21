@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:16:42 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:03:49 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 19:22:41 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int				ft_putchar(char c);
 int				ft_putchar_fd(char c, int fd);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+int				ft_isspace(int c);
 
 /*
 	** Double functions
@@ -144,6 +145,7 @@ char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 void			ft_strclr(char *s);
 void			ft_putendl_fd(char const *s, int fd);
+int				ft_isnumeric(const char *str);
 
 /*
 	** WideChar Functions

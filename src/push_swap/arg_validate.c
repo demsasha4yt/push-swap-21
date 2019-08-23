@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_pswap.h                                          :+:      :+:    :+:   */
+/*   arg_validate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/23 18:07:53 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 19:00:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 19:04:51 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 19:24:26 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef T_PSWAP_H
-# define T_PSWAP_H
-# include "t_stack.h"
+#include "push_swap.h"
 
-# define PFUNCTION_COUNT 11
+int		is_valid_arg(char *arg){
+	if (!ft_isnumeric(arg))
+		return (0);
+	return (1);
+}
 
-typedef struct		s_pswap
-{
-	t_stack			a;
-	t_stack			b;
-	int				(*psfuncs[PFUNCTION_COUNT])\
-					(struct s_pswap*);
-	int				debug_mode;
-}					t_pswap;
 
-#endif
