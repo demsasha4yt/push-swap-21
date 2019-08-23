@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 19:04:51 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 20:58:25 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:08:35 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,17 @@ int		is_valid_arg(char *arg)
 	if (!ft_isnumeric(arg) || !is_valid_number(arg))
 		return (0);
 	return (1);
+}
+
+int		is_arg_already_exist(t_stack *a, int arg)
+{
+	int		*values;
+	int		idx;
+
+	idx = -1;
+	values = a->values;
+	while (++idx < a->length)
+		if (values[idx] == arg)
+			return (1);
+	return (0);
 }
