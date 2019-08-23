@@ -1,7 +1,7 @@
 NAME = libft.a
 
 INCLUDE_DIR = ./includes
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 CFLAGS = -I $(INCLUDE_DIR)
 DEBUG_FLAGS =
 

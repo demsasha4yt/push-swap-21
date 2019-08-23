@@ -24,6 +24,8 @@ SRCS =		src/main_ps.c\
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 
+all: $(EXECUTABLE1)
+
 $(EXECUTABLE1): $(OBJS)
 	@echo "===>Building libft..."
 	make -C $(LIBFT_DIR)
@@ -33,7 +35,6 @@ $(EXECUTABLE1): $(OBJS)
 	@echo "===>$(EXECUTABLE1) has been builded"
 
 libft:
-
 
 %.o: %.c
 	$(CC) $(LDFLAGS) $(IFLAGS) $(CFLAGS) -o $@ -c $<
