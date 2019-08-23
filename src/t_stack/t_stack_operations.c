@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:35:01 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 21:50:00 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:53:39 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int		rotate(t_stack *entity)
 		pop(&tmp_stack, &tmp);
 		push(entity, tmp);
 	}
+	destroy_stack(&tmp_stack);
 	return (0);
 }
 
