@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 17:49:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 20:56:02 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:14:37 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int		ss(t_pswap *pswap)
 {
 	int ret;
 
-	ret = sa(pswap);
-	ret = sb(pswap);
+	ret = 0;
+	ret += sa(pswap);
+	ret += sb(pswap);
 	return (ret);
 }

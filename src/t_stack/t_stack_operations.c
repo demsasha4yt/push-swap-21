@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:35:01 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 20:54:56 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:50:00 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,25 @@ int		swap(t_stack *entity)
 
 int		rotate(t_stack *entity)
 {
-	(void)entity;
+	int top;
+	int tmp;
+	t_stack tmp_stack;
+
+	top = 0;
+	tmp = 0;
+	initialize_basic_stack(&tmp_stack, DEFAULT_STACK_SIZE);
+	pop(entity, &top);
+	while (!stack_is_empty(entity))
+	{
+		pop(entity, &tmp);
+		push(&tmp_stack, tmp);
+	}
+	push(entity, top);
+	while (!stack_is_empty(&tmp_stack))
+	{
+		pop(&tmp_stack, &tmp);
+		push(entity, tmp);
+	}
 	return (0);
 }
 

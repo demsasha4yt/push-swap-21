@@ -17,6 +17,7 @@ SRCS =		src/main_ps.c\
 			src/pswap_operations/pfuncs.c\
 			src/t_stack/t_stack.c\
 			src/t_stack/t_stack_operations.c\
+			src/t_stack/t_stack_methods.c\
 			src/t_stack/t_stack_debug.c\
 			src/args/validations.c\
 			src/args/initialize.c\

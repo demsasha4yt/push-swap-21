@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 17:59:15 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 20:56:54 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:14:46 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int		rrr(t_pswap *pswap)
 {
 	int ret;
 
-	ret = rra(pswap);
-	ret = rrb(pswap);
+	ret = 0;
+	ret += rra(pswap);
+	ret += rrb(pswap);
 	return (ret);
 }

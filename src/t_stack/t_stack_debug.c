@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:37:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 16:31:37 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:52:08 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	print_stack(t_stack *entity)
 {
 	int idx;
 
-	idx = -1;
+	idx = entity->length;
 	ft_printf("STACK DEBUG\n");
 	ft_printf("________________\n");
 	if (entity->length == 0)
 		ft_printf("NO ELEMENTS IN STACK\n");
-	while (++idx < entity->length)
+	while (--idx > -1)
 		ft_printf("%10d\n", entity->values[idx]);
 	ft_printf("________________\n");
 }

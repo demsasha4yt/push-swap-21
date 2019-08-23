@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 20:56:29 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 21:42:24 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int		push_swap_main(int argc, char **argv)
 		ft_printf("Error\n");
 		exit(ret);
 	}
+	print_stack(&pswap.a);
+	rotate(&pswap.a);
 	print_stack(&pswap.a);
 	destroy_stack(&pswap.a);
 	destroy_stack(&pswap.b);
