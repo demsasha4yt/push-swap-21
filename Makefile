@@ -1,7 +1,7 @@
 EXECUTABLE1=push_swap
 
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g
 IFLAGS=-I ./includes -I ./libft/includes
 LDFLAGS=
 
@@ -10,7 +10,10 @@ LIBFT_INCLUDE_DIR=$(LIBFT_DIR)/includes
 INCLUDE_DIR=./includes
 
 SRCS =		main.c\
-			src/push_swap.c
+			src/push_swap.c\
+			src/t_stack.c\
+			src/t_stack_operations.c\
+			src/t_stack_debug.c
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 

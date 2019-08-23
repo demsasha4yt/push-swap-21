@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   t_stack_operations.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 14:02:45 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 13:35:01 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 14:16:11 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int push_swap_main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
-	t_stack *stack = create_stack(DEFAULT_STACK_SIZE);
-	print_stack(stack);
-	push(stack, 1);
-	push(stack, 2);
-	push(stack, 3);
-	print_stack(stack);
-	int a = pop(stack);
-	print_stack(stack);
-	ft_printf("%d", a);
-	destroy_stack(stack);
-	return (0);
+void	push(t_stack *entity, int value){
+	if (entity->length == entity->size_available)
+		realloc_stack(&entity);
+	entity->values[entity->length] = value;
+	entity->length += 1;
+	return;
 }
+
+int		pop(t_stack *entity){
+	int value;
+	value = entity->values[entity->length - 1];
+	entity->values[entity->length - 1] = 0;
+	entity->length -= 1;
+	return (value);
+}
+
+
