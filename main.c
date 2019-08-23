@@ -6,13 +6,14 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 19:44:52 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 13:15:47 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 16:33:14 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv){
+int		main(int argc, char **argv)
+{
 	push_swap_main(argc, argv);
 	return (0);
 }

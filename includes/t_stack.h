@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:00:43 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 16:21:08 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 16:34:11 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 typedef struct	s_stack
 {
-	int*		values;
+	int			*values;
 	int			length;
 	int			size_available;
 }				t_stack;
@@ -26,7 +26,6 @@ int				create_stack(t_stack *entity, size_t size);
 int				initialize_basic_stack(t_stack *entity, size_t size);
 void			destroy_stack(t_stack *entity);
 int				realloc_stack(t_stack *entity);
-
 
 void			push(t_stack *entity, int value);
 int				pop(t_stack *entity, int *dest);
