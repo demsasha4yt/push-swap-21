@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   pswap_pushs.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:42:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 17:46:16 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 17:50:33 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		push_swap_main(int argc, char **argv)
-{
-	t_pswap pswap;
+int		pa(t_pswap *pswap){
+	int value;
+	value = 0;
 
-	(void)argc;
-	(void)argv;
-	if (initialize_basic_stack(&pswap.a, DEFAULT_STACK_SIZE))
+	if (pop(&pswap->b, &value))
 		return (1);
-	if (initialize_basic_stack(&pswap.b, DEFAULT_STACK_SIZE))
-		return (1);
+	push(&pswap->a, value);
+	return (0);
+}
 
-	destroy_stack(&pswap.a);
-	destroy_stack(&pswap.b);
+int		pb(t_pswap *pswap){
+	int value;
+	value = 0;
+
+	if (pop(&pswap->a, &value))
+		return (1);
+	push(&pswap->b, value);
 	return (0);
 }

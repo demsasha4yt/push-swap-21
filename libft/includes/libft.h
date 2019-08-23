@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:16:42 by bharrold          #+#    #+#             */
-/*   Updated: 2019/02/04 15:44:40 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 17:03:49 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int				ft_lllen(long long num, int base);
 char			*ft_lltoa(long long num, int base);
 void			ft_putnbr(int n);
 void			ft_putnbr_fd(int n, int fd);
-
+void			ft_swap_int(int *x, int *y);
 /*
 	** Str functions
 */
@@ -159,5 +159,11 @@ int				ft_wclen(const wchar_t w);
 int				ft_wstrlen(const wchar_t *wstr);
 wchar_t			*ft_wstrdup(const wchar_t *wstr);
 wchar_t			*ft_wcsncpy(wchar_t *dst, const wchar_t *src, ssize_t n);
+
+/*
+	** Array Functions
+*/
+
+void			ft_array_int_rotate(int *array, int length);
 
 #endif

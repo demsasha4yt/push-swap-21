@@ -61,6 +61,7 @@ SRCS =		./chars/ft_chtostr.c\
 			./numbers/ft_putnbr_fd.c\
 			./numbers/ft_ulllen.c\
 			./numbers/ft_ulltoa.c\
+			./numbers/ft_swap_int.c\
 			./str/ft_putendl.c\
 			./str/ft_putendl_fd.c\
 			./str/ft_putstr.c\
@@ -101,6 +102,7 @@ SRCS =		./chars/ft_chtostr.c\
 			./widechars/ft_wcsncpy.c\
 			./widechars/ft_wstrdup.c\
 			./widechars/ft_wstrlen.c\
+			./arrays/rotations.c\
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 
@@ -111,7 +113,7 @@ $(NAME): $(OBJS)
 
 
 %.o: %.c
-	@gcc $(FLAGS) $(DEBUG_FLAGS) $(CFLAGS) -o $@ -c $< 
+	@gcc $(FLAGS) $(DEBUG_FLAGS) $(CFLAGS) -o $@ -c $<
 
 clean:
 	@rm -rf $(OBJS)

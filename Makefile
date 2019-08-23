@@ -10,10 +10,14 @@ LIBFT_INCLUDE_DIR=$(LIBFT_DIR)/includes
 INCLUDE_DIR=./includes
 
 SRCS =		src/main_ps.c\
+			src/pswap_operations/pswap_pushs.c\
+			src/pswap_operations/pswap_rotations.c\
+			src/pswap_operations/pswap_rrotations.c\
+			src/pswap_operations/pswap_swaps.c\
 			src/push_swap/push_swap.c\
-			src/push_swap/t_stack.c\
-			src/push_swap/t_stack_operations.c\
-			src/push_swap/t_stack_debug.c
+			src/t_stack/t_stack.c\
+			src/t_stack/t_stack_operations.c\
+			src/t_stack/t_stack_debug.c
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 

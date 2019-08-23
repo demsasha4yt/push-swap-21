@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:00:43 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 16:34:11 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 17:55:47 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int				initialize_basic_stack(t_stack *entity, size_t size);
 void			destroy_stack(t_stack *entity);
 int				realloc_stack(t_stack *entity);
 
-void			push(t_stack *entity, int value);
+int				push(t_stack *entity, int value);
 int				pop(t_stack *entity, int *dest);
-void			swap(t_stack *entity);
-void			rotate(t_stack *entity);
-void			rrotate(t_stack *entity);
+int				swap(t_stack *entity);
+int				rotate(t_stack *entity);
+int				rrotate(t_stack *entity);
 
 void			print_stack(t_stack *entity);
 

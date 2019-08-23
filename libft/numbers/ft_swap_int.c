@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_swap_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:42:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 17:02:56 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 17:10:43 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int		push_swap_main(int argc, char **argv)
+void	ft_swap_int(int *x, int *y)
 {
-	t_pswap pswap;
-
-	(void)argc;
-	(void)argv;
-	if (initialize_basic_stack(&pswap.a, DEFAULT_STACK_SIZE))
-		return (1);
-	if (initialize_basic_stack(&pswap.b, DEFAULT_STACK_SIZE))
-		return (1);
-
-	destroy_stack(&pswap.a);
-	destroy_stack(&pswap.b);
-	return (0);
+	if (*x != *y)
+	{
+		*x = *x ^ *y;
+		*y = *y ^ *x;
+		*x = *x ^ *y;
+	}
 }

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rotations.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:42:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 16:52:49 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 17:01:07 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int		push_swap_main(int argc, char **argv)
-{
-	t_pswap pswap;
+void	ft_array_int_rotate(int *array, int length){
+	int half;
+	int i;
 
-	(void)argc;
-	(void)argv;
-	if (initialize_basic_stack(&pswap.a, DEFAULT_STACK_SIZE))
-		return (1);
-	if (initialize_basic_stack(&pswap.b, DEFAULT_STACK_SIZE))
-		return (1);
-
-	destroy_stack(&pswap.a);
-	destroy_stack(&pswap.b);
-	return (0);
+	i = 0;
+	half = length / 2;
+	while (++i < half)
+	{
+		array[i] = array[i] ^ array[length - i];
+		array[length - 1] = array[length - 1] ^ array[i];
+		array[i] = array[i] ^ array[length - 1];
+	}
 }

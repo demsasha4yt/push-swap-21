@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   pswap_swaps.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/21 20:18:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:42:35 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 17:49:28 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 17:53:51 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		push_swap_main(int argc, char **argv)
+int sa(t_pswap *pswap)
 {
-	t_pswap pswap;
-
-	(void)argc;
-	(void)argv;
-	if (initialize_basic_stack(&pswap.a, DEFAULT_STACK_SIZE))
-		return (1);
-	if (initialize_basic_stack(&pswap.b, DEFAULT_STACK_SIZE))
-		return (1);
-
-	destroy_stack(&pswap.a);
-	destroy_stack(&pswap.b);
-	return (0);
+	int ret;
+	ret = swap(&pswap->a);
+	return (ret);
 }
+
+int sb(t_pswap *pswap)
+{
+	int ret;
+
+	ret = swap(&pswap->b);
+	return (ret);
+}
+
+int ss(t_pswap *pswap)
+{
+	int ret;
+
+	ret = sa(pswap);
+	ret = sb(pswap);
+	return ret;
+}
+

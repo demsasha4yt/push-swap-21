@@ -6,19 +6,20 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:35:01 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 16:32:06 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 17:56:23 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack *entity, int value)
+int		push(t_stack *entity, int value)
 {
 	if (entity->length == entity->size_available)
-		realloc_stack(entity);
+		if(realloc_stack(entity))
+			return (1);
 	entity->values[entity->length] = value;
 	entity->length += 1;
-	return ;
+	return (0);
 }
 
 int		pop(t_stack *entity, int *value)
@@ -28,5 +29,26 @@ int		pop(t_stack *entity, int *value)
 	*value = entity->values[entity->length - 1];
 	entity->values[entity->length - 1] = 0;
 	entity->length -= 1;
+	return (0);
+}
+
+int		swap(t_stack *entity)
+{
+	if (entity->length < 2)
+		return (1);
+	ft_swap_int(&entity->values[entity->length - 1],
+		&entity->values[entity->length - 2]);
+	return (0);
+}
+
+int rotate(t_stack *entity)
+{
+	(void)entity;
+	return (0);
+}
+
+int rrotate(t_stack *entity)
+{
+	(void)entity;
 	return (0);
 }
