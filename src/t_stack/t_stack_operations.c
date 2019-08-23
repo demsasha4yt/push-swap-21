@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:35:01 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:56:23 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 20:54:56 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		push(t_stack *entity, int value)
 {
 	if (entity->length == entity->size_available)
-		if(realloc_stack(entity))
+		if (realloc_stack(entity))
 			return (1);
 	entity->values[entity->length] = value;
 	entity->length += 1;
@@ -41,13 +41,13 @@ int		swap(t_stack *entity)
 	return (0);
 }
 
-int rotate(t_stack *entity)
+int		rotate(t_stack *entity)
 {
 	(void)entity;
 	return (0);
 }
 
-int rrotate(t_stack *entity)
+int		rrotate(t_stack *entity)
 {
 	(void)entity;
 	return (0);

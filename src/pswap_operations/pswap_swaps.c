@@ -6,20 +6,21 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 17:49:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:53:51 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 20:56:02 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int sa(t_pswap *pswap)
+int		sa(t_pswap *pswap)
 {
 	int ret;
+
 	ret = swap(&pswap->a);
 	return (ret);
 }
 
-int sb(t_pswap *pswap)
+int		sb(t_pswap *pswap)
 {
 	int ret;
 
@@ -27,12 +28,11 @@ int sb(t_pswap *pswap)
 	return (ret);
 }
 
-int ss(t_pswap *pswap)
+int		ss(t_pswap *pswap)
 {
 	int ret;
 
 	ret = sa(pswap);
 	ret = sb(pswap);
-	return ret;
+	return (ret);
 }
-

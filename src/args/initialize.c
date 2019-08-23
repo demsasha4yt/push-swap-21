@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pswap_rrotations.c                                 :+:      :+:    :+:   */
+/*   initialize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/23 17:59:15 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 20:56:54 by bharrold         ###   ########.fr       */
+/*   Created: 2019/08/23 20:47:33 by bharrold          #+#    #+#             */
+/*   Updated: 2019/08/23 20:48:34 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		rra(t_pswap *pswap)
+int	initialize_args(t_pswap *pswap, int argc, char **argv)
 {
-	int ret;
+	int idx;
 
-	ret = rrotate(&pswap->a);
-	return (ret);
-}
-
-int		rrb(t_pswap *pswap)
-{
-	int ret;
-
-	ret = rrotate(&pswap->b);
-	return (ret);
-}
-
-int		rrr(t_pswap *pswap)
-{
-	int ret;
-
-	ret = rra(pswap);
-	ret = rrb(pswap);
-	return (ret);
+	idx = 0;
+	if (argc < 2)
+		return (8);
+	while (++idx < argc)
+	{
+		if (!is_valid_arg(argv[idx]))
+			return (16);
+		push(&pswap->a, ft_atoi(argv[idx]));
+	}
+	return (0);
 }

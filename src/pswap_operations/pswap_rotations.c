@@ -6,13 +6,13 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 17:56:52 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:58:43 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 20:53:29 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ra(t_pswap *pswap)
+int		ra(t_pswap *pswap)
 {
 	int ret;
 
@@ -20,7 +20,7 @@ int ra(t_pswap *pswap)
 	return (ret);
 }
 
-int rb(t_pswap *pswap)
+int		rb(t_pswap *pswap)
 {
 	int ret;
 
@@ -28,7 +28,7 @@ int rb(t_pswap *pswap)
 	return (ret);
 }
 
-int rr(t_pswap *pswap)
+int		rr(t_pswap *pswap)
 {
 	int ret;
 

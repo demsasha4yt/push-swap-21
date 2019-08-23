@@ -6,13 +6,14 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 16:52:49 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 17:01:07 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/23 20:52:21 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_array_int_rotate(int *array, int length){
+void	ft_array_int_rotate(int *array, int length)
+{
 	int half;
 	int i;
 
