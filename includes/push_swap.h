@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 19:44:14 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 14:53:14 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 17:35:51 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,19 @@ int		initialize_push_swap(t_pswap *pswap,
 					int argc, char **argv);
 
 int		algo_sort_start(t_pswap *pswap);
+
+/*
+	**	Sort utils
+*/
+
+int		is_resolved(t_pswap *pswap);
+int		get_median(t_stack *entity, int *median);
+int		array_get_max_index(const int *array, const int len);
+
+/*
+	**	Quicksort alog
+*/
+
+int		algo_quicksort(t_pswap *pswap);
 
 #endif

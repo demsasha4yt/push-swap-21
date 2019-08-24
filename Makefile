@@ -19,13 +19,17 @@ SRCS =		src/main_ps.c\
 			src/t_stack/t_stack.c\
 			src/t_stack/t_stack_operations.c\
 			src/t_stack/t_stack_methods.c\
+			src/t_stack/t_stack_methods_2.c\
 			src/t_stack/t_stack_debug.c\
 			src/args/validations.c\
 			src/args/initialize.c\
 			src/push_swap/push_swap.c\
 			src/push_swap/push_swap_init.c\
+			src/push_swap/sort_utils/median.c\
+			src/push_swap/sort_utils/resolve.c\
+			src/push_swap/sort_utils/utils.c\
 			src/push_swap/algo.c\
-
+			src/push_swap/quicksort/algo_quicksort.c\
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 
