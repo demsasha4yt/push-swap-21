@@ -6,14 +6,14 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:00:43 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 17:18:41 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 18:44:51 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef T_STACK_H
 # define T_STACK_H
 
-# define DEFAULT_STACK_SIZE 2
+# define DEFAULT_STACK_SIZE 512
 
 typedef struct	s_stack
 {
