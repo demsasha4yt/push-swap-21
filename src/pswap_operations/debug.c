@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 22:41:03 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 22:49:27 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:26:42 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,22 @@
 
 int debug_print_stacks(t_pswap *pswap)
 {
-	int tmp_a;
-	int tmp_b;
+	int i;
 
+	i = pswap->a.length;
+	if (pswap->b.length > i)
+		i = pswap->b.length;
+	ft_printf("%6s | %6s\n", "A", "B");
+	ft_printf("---------------\n");
+	while (--i > -1)
+	{
+		if (i < pswap->a.length && i < pswap->b.length)
+			ft_printf("%6d | %6d\n", pswap->a.values[i], pswap->b.values[i]);
+		else if (i < pswap->a.length)
+			ft_printf("%6d | %6c\n", pswap->a.values[i], ' ');
+		else if (i < pswap->b.length)
+			ft_printf("%6c | %6d\n", ' ', pswap->b.values[i]);
+	}
+	ft_printf("---------------\n");
+	return (0);
 }

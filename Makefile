@@ -15,6 +15,7 @@ SRCS =		src/main_ps.c\
 			src/pswap_operations/pswap_rrotations.c\
 			src/pswap_operations/pswap_swaps.c\
 			src/pswap_operations/pfuncs.c\
+			src/pswap_operations/debug.c\
 			src/t_stack/t_stack.c\
 			src/t_stack/t_stack_operations.c\
 			src/t_stack/t_stack_methods.c\
