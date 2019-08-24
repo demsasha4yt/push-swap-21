@@ -6,13 +6,13 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 22:41:03 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 14:26:42 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:30:31 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int debug_print_stacks(t_pswap *pswap)
+int		debug_print_stacks(t_pswap *pswap)
 {
 	int i;
 
@@ -30,6 +30,6 @@ int debug_print_stacks(t_pswap *pswap)
 		else if (i < pswap->b.length)
 			ft_printf("%6c | %6d\n", ' ', pswap->b.values[i]);
 	}
-	ft_printf("---------------\n");
+	ft_printf("---------------");
 	return (0);
 }

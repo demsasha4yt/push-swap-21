@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 19:04:51 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 22:25:33 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:30:19 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ int		is_valid_arg(char *arg)
 
 int		is_arg_already_exist(t_stack *a, int arg)
 {
-	int tmp;
-	t_stack tmp_stack;
+	int		tmp;
+	t_stack	tmp_stack;
 
 	copy_stack(&tmp_stack, a);
 	while (!stack_is_empty(&tmp_stack))
