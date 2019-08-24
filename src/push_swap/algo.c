@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 22:26:29 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 17:35:07 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 18:40:44 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,11 @@ int		basic_3sort(t_pswap *pswap)
 	if (len == 3)
 	{
 		len = array_get_max_index(array, len);
-		ft_printf("%d\n", len);
 		if (len == 1)
 			ps_exec(pswap, RRA_FUNC);
 		if (len == 2)
 			ps_exec(pswap, RA_FUNC);
 		array = stack_to_array(&pswap->a);
-		ft_printf("%d %d %d\n", array[0], array[1], array[2]);
 		if (array[1] < array[2])
 			ps_exec(pswap, SA_FUNC);
 	}

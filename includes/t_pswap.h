@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 18:07:53 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 19:00:35 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 18:42:22 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct		s_pswap
 	t_stack			b;
 	int				(*psfuncs[PFUNCTION_COUNT])\
 					(struct s_pswap*);
+	char			*psfuncs_name[PFUNCTION_COUNT];
 	int				debug_mode;
 }					t_pswap;
 
