@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 22:41:03 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 14:30:31 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:53:51 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,12 @@ int		debug_print_stacks(t_pswap *pswap)
 			ft_printf("%6c | %6d\n", ' ', pswap->b.values[i]);
 	}
 	ft_printf("---------------");
+	return (0);
+}
+
+int		display_error_and_exit(int error_code)
+{
+	write(2, "Error\n", 6);
+	exit(error_code);
 	return (0);
 }
