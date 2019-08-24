@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 13:00:43 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 22:14:35 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:43:40 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,12 @@ int				swap(t_stack *entity);
 int				rotate(t_stack *entity);
 int				rrotate(t_stack *entity);
 
+int				stack_is_initialized(t_stack *entity);
 int				stack_is_empty(t_stack *entity);
 int				copy_stack(t_stack *dest, t_stack *source);
+int				stack_get_length(t_stack *entity);
+int				stack_is_sorted(t_stack *entity);
+
 void			print_stack(t_stack *entity);
 
 #endif
