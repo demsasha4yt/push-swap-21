@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 20:47:33 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/23 21:10:05 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:46:12 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	initialize_args(t_pswap *pswap, int argc, char **argv)
 	int idx;
 	int converted;
 
-	idx = 0;
+	idx = argc;
 	if (argc < 2)
 		return (8);
-	while (++idx < argc)
+	while (--idx > 0)
 	{
 		if (!is_valid_arg(argv[idx]))
 			return (16);
