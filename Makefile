@@ -28,6 +28,8 @@ SRCS =		src/main_ps.c\
 			src/push_swap/sort_utils/median.c\
 			src/push_swap/sort_utils/resolve.c\
 			src/push_swap/sort_utils/utils.c\
+			src/push_swap/sort_utils/utils_2.c\
+			src/push_swap/sort_utils/idx_getters.c\
 			src/push_swap/algo.c\
 			src/push_swap/quicksort/algo_quicksort.c\
 			src/push_swap/quicksort/algo_quicksort_swaps.c\

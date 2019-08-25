@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/25 13:03:03 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/25 13:23:56 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/25 15:43:08 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		try_swap_a(t_pswap *pswap)
 
 	if (len < 2)
 		return (0);
-	if (array[len - 1] > array[len -2])
+	if (array[len - 1] > array[len - 2])
 		ps_exec(pswap, SA_FUNC);
 	return (0);
 }
@@ -31,7 +31,7 @@ int		try_swap_b(t_pswap *pswap)
 
 	if (len < 2)
 		return (0);
-	if (array[len - 1] < array[len -2])
+	if (array[len - 1] < array[len - 2])
 		ps_exec(pswap, SB_FUNC);
 	return (0);
 }
