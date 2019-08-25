@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 18:06:57 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 18:38:40 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/25 16:26:25 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int				pfuncs_initialize(t_pswap *pswap);
 int				pfuncs_initialize_names(t_pswap *pswap);
 int				pfuncs_destroy_names(t_pswap *pswap);
 int				ps_exec(t_pswap *pswap, t_pfuncs func);
+int				ps_exec_ntimes(t_pswap *pswap, t_pfuncs func, int n);
 int				debug_print_stacks(t_pswap *pswap);
 int				display_error_and_exit(int error_code);
 

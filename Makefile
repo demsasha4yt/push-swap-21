@@ -15,6 +15,7 @@ SRCS =		src/main_ps.c\
 			src/pswap_operations/pswap_rrotations.c\
 			src/pswap_operations/pswap_swaps.c\
 			src/pswap_operations/pfuncs.c\
+			src/pswap_operations/executions.c\
 			src/pswap_operations/debug.c\
 			src/t_stack/t_stack.c\
 			src/t_stack/t_stack_operations.c\
@@ -30,10 +31,11 @@ SRCS =		src/main_ps.c\
 			src/push_swap/sort_utils/utils.c\
 			src/push_swap/sort_utils/utils_2.c\
 			src/push_swap/sort_utils/idx_getters.c\
+			src/push_swap/sort_utils/stack_movements.c\
 			src/push_swap/algo.c\
 			src/push_swap/quicksort/algo_quicksort.c\
 			src/push_swap/quicksort/algo_quicksort_swaps.c\
-			src/push_swap/quicksort/algo_quicksort_splits.c\
+			#src/push_swap/quicksort/algo_quicksort_splits.c\
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 
