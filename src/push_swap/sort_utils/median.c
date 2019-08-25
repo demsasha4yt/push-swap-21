@@ -13,7 +13,7 @@
 #include "push_swap.h"
 #include "limits.h"
 
-int		get_median(t_stack *entity, int *median)
+int		stack_get_median(t_stack *entity, int *median)
 {
 	int			max;
 	int			min;

@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 18:58:54 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 18:36:41 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/25 13:29:26 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ int	initialize_push_swap(t_pswap *pswap, int argc, char **argv)
 	ret += initialize_args(pswap, argc, argv);
 	return (ret);
 }
+
