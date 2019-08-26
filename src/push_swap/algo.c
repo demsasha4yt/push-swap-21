@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/23 22:26:29 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/24 18:40:44 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/26 19:36:19 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@ int		algo_sort_start(t_pswap *pswap)
 	int ret;
 
 	ret = 0;
-	if (is_resolved(pswap))
-		return (ret);
+	// if (is_resolved(pswap))
+	// 	return (ret);
 	debug_print_stacks(pswap);
 	if (stack_get_length(&pswap->a) <= 3)
 		ret = basic_3sort(pswap);
-	else
-		ret = algo_quicksort(pswap);
 	debug_print_stacks(pswap);
 	return (ret);
 }
