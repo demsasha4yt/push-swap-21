@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 19:44:14 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/26 19:35:03 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/26 19:43:40 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,13 @@ int				algo_sort_start(t_pswap *pswap);
 /*
 	**	Sort utils
 */
-
+int				is_resolved(t_pswap *pswap);
 int				array_get_max_index(int *array, int len);
 
 /*
 	**	Quicksort alog
 */
 
-/*
-	**	Algo insertions
-*/
-
-int				algo_insertion(t_pswap *pswap);
+int				algo_quicksort(t_pswap *pswap);
 
 #endif
