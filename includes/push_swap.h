@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 19:44:14 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/26 19:43:40 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/26 20:06:34 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,17 @@ int				algo_sort_start(t_pswap *pswap);
 	**	Sort utils
 */
 int				is_resolved(t_pswap *pswap);
-int				array_get_max_index(int *array, int len);
+int				array_get_max_index(const int *array, const int len);
+int				array_get_max(const int *array, const int len);
+int				array_get_min_index(const int *array, const int len);
+int				array_get_min(const int *array, const int len);
+int				array_get_min(const int *array, const int len);
 
 /*
 	**	Quicksort alog
 */
 
-int				algo_quicksort(t_pswap *pswap);
-
+int				stack_get_median(t_stack *entity);
+int				stack_nearest_larger_value_idx(t_stack *entity, int value);
+int				stack_nearest_lower_value_idx(t_stack *entity, int value);
 #endif
