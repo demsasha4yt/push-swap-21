@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 19:44:14 by bharrold          #+#    #+#             */
-/*   Updated: 2019/08/26 20:06:34 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/08/27 16:26:03 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int				array_get_min(const int *array, const int len);
 */
 
 int				stack_get_median(t_stack *entity);
-int				stack_nearest_larger_value_idx(t_stack *entity, int value);
-int				stack_nearest_lower_value_idx(t_stack *entity, int value);
+int				stack_nearest_larger_value_idx(t_stack *entity, int value,
+					int *dest);
+int				stack_nearest_lower_value_idx(t_stack *entity, int value,
+						int *dest);
 #endif
