@@ -35,6 +35,7 @@ SRCS =		./chars/ft_chtostr.c\
 			./ft_printf/utils.c\
 			./ft_printf/utils2.c\
 			./lst/ft_lstadd.c\
+			./lst/ft_lstadd_back.c\
 			./lst/ft_lstdel.c\
 			./lst/ft_lstdelone.c\
 			./lst/ft_lstiter.c\

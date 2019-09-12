@@ -9,31 +9,18 @@ LIBFT_DIR=./libft
 LIBFT_INCLUDE_DIR=$(LIBFT_DIR)/includes
 INCLUDE_DIR=./includes
 
-SRCS =		src/main_ps.c\
-			src/pswap_operations/pswap_pushs.c\
-			src/pswap_operations/pswap_rotations.c\
-			src/pswap_operations/pswap_rrotations.c\
-			src/pswap_operations/pswap_swaps.c\
-			src/pswap_operations/pfuncs.c\
-			src/pswap_operations/executions.c\
-			src/pswap_operations/debug.c\
-			src/t_stack/t_stack.c\
-			src/t_stack/t_stack_operations.c\
-			src/t_stack/t_stack_methods.c\
-			src/t_stack/t_stack_methods_2.c\
-			src/t_stack/t_stack_debug.c\
-			src/args/validations.c\
-			src/args/initialize.c\
-			src/push_swap/push_swap.c\
-			src/push_swap/push_swap_init.c\
-			src/push_swap/algo.c\
-			src/push_swap/sort_utils/utils.c\
-			src/push_swap/sort_utils/array_minmax.c\
-			src/push_swap/sort_utils/stack_utils.c\
-			src/push_swap/sort_utils/resolve_utils.c\
-			src/push_swap/sort_utils/basic_sorts.c\
-			src/push_swap/quicksort/algo_quicksort.c\
-			src/push_swap/insertion/algo_insertion.c\
+SRCS =		./src/main_ps.c\
+			./src/t_stack/t_stack.c\
+			./src/t_stack/t_stack_methods.c\
+			./src/utils/push_swap_initialize.c\
+			./src/utils/push_swap_destroy.c\
+			./src/utils/merge_commands.c\
+			./src/utils/print_result.c\
+			./src/operations/operations.c\
+			./src/algo_quicksort/algo_quicksort.c\
+			./src/algo_quicksort/quicksort_utils.c\
+			./src/algo_basic/basicsort.c\
+			./src/algo_basic/basicsort_reverse.c\
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 
