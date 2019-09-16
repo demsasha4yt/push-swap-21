@@ -24,7 +24,11 @@ SRCS =		./src/main_ps.c\
 			./src/algo_basic/basicsort_reverse.c\
 
 SRCS2 =		./src/main_checker.c\
-			./src/checker/get_next_line.c
+			./src/checker/get_next_line.c\
+			./src/t_stack/t_stack.c\
+			./src/t_stack/t_stack_methods.c\
+			./src/utils/push_swap_initialize.c\
+			./src/utils/push_swap_destroy.c
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 OBJS2 = $(patsubst %.c,%.o, $(SRCS2))

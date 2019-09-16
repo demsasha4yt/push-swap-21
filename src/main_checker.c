@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 22:27:30 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:49:29 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int		main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	current = NULL;
-	(void)argc;
-	(void)argv;
+	initialize_stacks(argc, argv, &a, &b);
 	while (get_next_line(0, &current))
 	{
-		ft_printf("%s\n", current);
+		ft_printf("checker %s\n", current);
 	}
 	ft_strdel(&current);
+	ps_destroy(&a, &b, NULL);
 }
