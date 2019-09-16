@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:41:05 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 23:36:19 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 01:28:04 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int					exist(t_stack *a, int number);
 void				del(t_stack **a);
 int					is_sorted(t_stack *a, int count);
 void				print_stack(t_stack *a);
+int					stack_get_length(t_stack *a);
 
 #endif

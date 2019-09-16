@@ -92,6 +92,7 @@ SRCS =		./chars/ft_chtostr.c\
 			./str/ft_strnstr.c\
 			./str/ft_strrchr.c\
 			./str/ft_strsplit.c\
+			./str/ft_strsplit_free.c\
 			./str/ft_strstr.c\
 			./str/ft_strsub.c\
 			./str/ft_strtrim.c\

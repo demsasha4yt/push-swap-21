@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:44:14 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:31:42 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 01:48:18 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,17 @@ int		main(int argc, char **argv)
 		exit(0);
 	initialize_stacks(argc, argv, &a, &b);
 	ps = (t_pushswap*)malloc(sizeof(t_pushswap));
-	ps->count = initialize_count(argc - 1);
+	ps->count = initialize_count(stack_get_length(a));
 	ps->commands = NULL;
-	ps->max_count = argc - 1;
-	ps->count_a = argc - 1;
+	ps->max_count = stack_get_length(a);
+	ps->count_a = stack_get_length(a);
 	ps->sorted_count = 0;
 	ps->i = -1;
-	if (argc - 1 <= 3)
+	if (stack_get_length(a) <= 3)
 		basic_3sort(&a, &ps);
 	else
 		algo_quicksort(&a, &b, &ps);
 	print_result(ps->commands);
+	ps_destroy(&a, &b, &ps);
 	return (0);
 }

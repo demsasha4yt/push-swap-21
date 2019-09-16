@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:16:42 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:49:47 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 01:12:29 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,7 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+void			ft_strsplit_free(char ***strsplit);
 void			ft_strclr(char *s);
 void			ft_putendl_fd(char const *s, int fd);
 int				ft_isnumeric(const char *str);

@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 20:55:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 23:36:03 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 01:27:45 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,17 @@ void		print_stack(t_stack *a)
 		ft_printf("%d\n", ptr->number);
 		ptr = ptr->next;
 	}
+}
+
+int			stack_get_length(t_stack *a)
+{
+	int	i;
+
+	i = 0;
+	while (a)
+	{
+		i++;
+		a = a->next;
+	}
+	return (i);
 }
