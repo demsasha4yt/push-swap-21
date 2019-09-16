@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:16:42 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 22:22:29 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 00:49:47 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ typedef struct	s_list
 char			*ft_chtostr(char c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
+int				ft_isdigit_base(char c, int base);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
@@ -50,6 +51,7 @@ int				ft_putchar_fd(char c, int fd);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_isspace(int c);
+
 
 /*
 	** Double functions
@@ -148,6 +150,8 @@ char			**ft_strsplit(char const *s, char c);
 void			ft_strclr(char *s);
 void			ft_putendl_fd(char const *s, int fd);
 int				ft_isnumeric(const char *str);
+int				ft_isprefix(const char *str, int base);
+int				ft_isnum(char *str, int base);
 
 /*
 	** WideChar Functions
