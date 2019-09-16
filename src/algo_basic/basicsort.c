@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 20:29:37 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 20:49:22 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:33:30 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void		basic_3sort(t_stack **a, t_pushswap **ps)
 	if ((*ps)->count_a == 3 && (num2 > num1 && num2 > num3))
 		command_rr(a, &(*ps)->commands, "rra\n\0");
 }
-
 
 static void	enumeration_a(t_stack **a, t_pushswap **ps)
 {
@@ -57,7 +56,7 @@ static void	enumeration_a(t_stack **a, t_pushswap **ps)
 		command_rr(a, &(*ps)->commands, "rra\n\0");
 	}
 	if ((num1 < num2 && num1 > num3) || (num1 > num2 && num1 < num3)
-		||(num1 > num2 && num2 > num3))
+		|| (num1 > num2 && num2 > num3))
 		command_s(*a, &(*ps)->commands, "sa\n\0");
 }
 

@@ -6,40 +6,48 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:54:12 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 20:15:42 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:42:57 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static int	is_valid_number(char *str)
+{
+	int sign;
+	int len;
+
+	sign = 1;
+	if (str == NULL || *str == '\0')
+		return (0);
+	while (*str && ft_isspace(*str))
+		str++;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	len = ft_strlen(str);
+	if (len > 10 || (sign > 0
+			&& len == 10 && ft_strncmp(str, "2147483647", 10) > 0))
+		return (0);
+	if (sign < 0
+		&& len == 10 && ft_strncmp(str, "2147483648", 10) > 0)
+		return (0);
+	return (1);
+}
+
+static int	is_valid_arg(char *arg)
+{
+	if (!ft_isnumeric(arg) || !is_valid_number(arg))
+		return (0);
+	return (1);
+}
+
 int			put_number(t_stack **a, char *str)
 {
-	int	number;
-	int	flag;
-	int	off;
-	int	lim;
-
-	number = 0;
-	flag = 1;
-	if (*str == '-' || *str == '+')
-	{
-		flag = (*str == '-') ? -1 : 1;
-		str++;
-	}
-	if (*str == '\0')
+	if (!is_valid_arg(str))
 		error(a, NULL, NULL);
-	off = flag == 1 ? INT_MAX : INT_MIN;
-	lim = flag * (off % 10);
-	off /= flag * 10;
-	while (*str != '\0')
-	{
-		if (*str > '9' || *str < '0' || number * flag > off
-			|| (flag * number == off && (*str - '0') > lim))
-			error(a, NULL, NULL);
-		number = number * 10 + flag * (*str - '0');
-		str++;
-	}
-	return (number);
+	return (ft_atoi(str));
 }
 
 int			*initialize_count(int count)

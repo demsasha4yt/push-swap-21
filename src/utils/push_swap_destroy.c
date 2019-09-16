@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:51:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 20:11:21 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:35:01 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ void		ps_destroy(t_stack **a, t_stack **b, t_pushswap **ps)
 		{
 			ptr = (*ps)->commands;
 			(*ps)->commands = (*ps)->commands->next;
-			destroy_content
-		(&ptr);
+			destroy_content(&ptr);
 		}
 		free((*ps)->commands);
 		free((*ps)->count);
@@ -47,6 +46,6 @@ void		ps_destroy(t_stack **a, t_stack **b, t_pushswap **ps)
 void		error(t_stack **a, t_stack **b, t_pushswap **ps)
 {
 	ps_destroy(a, b, ps);
-	write (1, "Error\n", 6);
+	write(1, "Error\n", 6);
 	exit(1);
 }

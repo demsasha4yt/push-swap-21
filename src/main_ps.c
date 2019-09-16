@@ -6,17 +6,17 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:44:14 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 21:03:53 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:32:23 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
-	t_pushswap *ps;
+	t_stack		*a;
+	t_stack		*b;
+	t_pushswap	*ps;
 
 	a = NULL;
 	b = NULL;

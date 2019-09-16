@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 22:13:12 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 22:23:46 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:31:38 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ char	*get_new_cur(char **current, char *buf)
 	size_t	j;
 
 	tmp = *current;
-	if (!tmp || !buf || !(newcurrent = ft_strnew(ft_strlen(tmp) + ft_strlen(buf))))
+	if (!tmp || !buf
+		|| !(newcurrent = ft_strnew(ft_strlen(tmp) + ft_strlen(buf))))
 		return (NULL);
 	i = -1;
 	j = -1;
@@ -71,7 +72,8 @@ char	*get_line(char *dst, char *src, int idx)
 
 char	*strdeli(char **current, int idx)
 {
-	char *newcurrent;
+	char	*newcurrent;
+
 	newcurrent = ft_strdup(*current + idx + 1);
 	free(*current);
 	return (newcurrent);

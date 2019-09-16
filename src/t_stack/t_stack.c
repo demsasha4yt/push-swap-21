@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:58:36 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 20:56:14 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:33:52 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,5 @@ void	del(t_stack **a)
 
 int		peek(t_stack *a)
 {
-	return a->number;
+	return (a->number);
 }

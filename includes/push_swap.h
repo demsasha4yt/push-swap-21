@@ -6,19 +6,19 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:49:46 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 21:03:31 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:35:38 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "libft.h"
-#include <limits.h>
+# include "libft.h"
+# include <limits.h>
 
-#include "t_stack.h"
-#include "t_pushswap.h"
-#include "operations.h"
+# include "t_stack.h"
+# include "t_pushswap.h"
+# include "operations.h"
 
 void	initialize_stacks(int argc, char **argv, t_stack **a, t_stack **b);
 int		*initialize_count(int count);
