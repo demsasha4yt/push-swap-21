@@ -27,6 +27,7 @@ SRCS2 =		./src/main_checker.c\
 			./src/checker/get_next_line.c\
 			./src/t_stack/t_stack.c\
 			./src/t_stack/t_stack_methods.c\
+			./src/operations/operations.c\
 			./src/utils/push_swap_initialize.c\
 			./src/utils/push_swap_destroy.c
 

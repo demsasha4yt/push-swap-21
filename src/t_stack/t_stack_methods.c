@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 20:55:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 20:55:51 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 23:36:03 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,16 @@ int			is_sorted(t_stack *a, int count)
 		a = a->next;
 	}
 	return (0);
+}
+
+void		print_stack(t_stack *a)
+{
+	t_stack *ptr;
+
+	ptr = a;
+	while (ptr)
+	{
+		ft_printf("%d\n", ptr->number);
+		ptr = ptr->next;
+	}
 }
