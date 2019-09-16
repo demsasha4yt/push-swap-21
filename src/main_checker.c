@@ -6,13 +6,12 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 23:49:03 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 23:50:57 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "get_next_line.h"
-
 
 static void	handle_dual_operation(t_stack **a, t_stack **b, char *operation)
 {
@@ -55,7 +54,7 @@ static void	handle_operation(t_stack **a, t_stack **b, char *operation)
 		handle_dual_operation(a, b, operation);
 }
 
-int				main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	t_stack *a;
 	t_stack *b;
