@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_checker.c                                     :+:      :+:    :+:   */
+/*   ft_strchri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 22:27:30 by bharrold         ###   ########.fr       */
+/*   Created: 2018/11/29 21:27:53 by bharrold          #+#    #+#             */
+/*   Updated: 2018/11/29 22:27:55 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "get_next_line.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+int		ft_strchri(const char *s, int c)
 {
-	t_stack *a;
-	t_stack *b;
-	char	*current;
+	int				i;
 
-	a = NULL;
-	b = NULL;
-	current = NULL;
-	(void)argc;
-	(void)argv;
-	while (get_next_line(0, &current))
-	{
-		ft_printf("%s\n", current);
-	}
-	ft_strdel(&current);
+	i = -1;
+	while (s[++i])
+		if (s[i] == c)
+			break ;
+	return (i);
 }

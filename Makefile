@@ -1,4 +1,5 @@
 EXECUTABLE1=push_swap
+EXECUTABLE2=checker
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror -g
@@ -22,30 +23,40 @@ SRCS =		./src/main_ps.c\
 			./src/algo_basic/basicsort.c\
 			./src/algo_basic/basicsort_reverse.c\
 
+SRCS2 =		./src/main_checker.c\
+			./src/checker/get_next_line.c
+
 OBJS = $(patsubst %.c,%.o, $(SRCS))
+OBJS2 = $(patsubst %.c,%.o, $(SRCS2))
 
-all: $(EXECUTABLE1)
+all: push_swap checker
 
-$(EXECUTABLE1): $(OBJS)
-	@echo "===>Building libft..."
+push_swap: $(OBJS)
+	@echo "===>Building libft for push_swap if needed..."
 	make -C $(LIBFT_DIR)
 	@echo "===>Libft has been builded!"
 	@echo "===>Building $(EXECUTABLE1)"
 	$(CC) $(LDFLAGS) $(CFLAGS) -o $(EXECUTABLE1) $(OBJS) -lm -L $(LIBFT_DIR) -lft
 	@echo "===>$(EXECUTABLE1) has been builded"
 
-libft:
+checker: $(OBJS2)
+	@echo "===>Building libft for checker if needed..."
+	make -C $(LIBFT_DIR)
+	@echo "===>Libft has been builded!"
+	@echo "===>Building $(EXECUTABLE2)"
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $(EXECUTABLE2) $(OBJS2) -lm -L $(LIBFT_DIR) -lft
+	@echo "===>$(EXECUTABLE2) has been builded"
 
 %.o: %.c
 	$(CC) $(LDFLAGS) $(IFLAGS) $(CFLAGS) -o $@ -c $<
 
 clean:
-
 	make -C $(LIBFT_DIR) clean
 	rm -rf $(OBJS)
+	rm -rf $(OBJS2)
 
 fclean: clean
 	make -C $(LIBFT_DIR) fclean
-	rm -f $(EXECUTABLE1)
-
+	rm -rf $(EXECUTABLE1)
+	rm -rf $(EXECUTABLE2)
 re: fclean all

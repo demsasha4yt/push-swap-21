@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 21:01:04 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/01 21:03:02 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/16 22:11:14 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,7 @@ void			algo_quicksort(t_stack **a, t_stack **b, t_pushswap **ps)
 	while (is_sorted(*a, (*ps)->max_count))
 	{
 		if ((*ps)->count_a == 0 && (*ps)->count[(*ps)->i] < 4
-		&& (*ps)->count[(*ps)->i] > -4)
+			&& (*ps)->count[(*ps)->i]  > -4)
 			basic_sort(a, b, ps);
 		else if ((*ps)->count_a == 0)
 			sort_b(a, b, ps);

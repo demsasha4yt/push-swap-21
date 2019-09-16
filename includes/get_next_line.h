@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_checker.c                                     :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 22:27:30 by bharrold         ###   ########.fr       */
+/*   Created: 2018/11/26 22:09:33 by bharrold          #+#    #+#             */
+/*   Updated: 2019/09/16 22:23:45 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "get_next_line.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int		main(int argc, char **argv)
-{
-	t_stack *a;
-	t_stack *b;
-	char	*current;
+# include "libft.h"
 
-	a = NULL;
-	b = NULL;
-	current = NULL;
-	(void)argc;
-	(void)argv;
-	while (get_next_line(0, &current))
-	{
-		ft_printf("%s\n", current);
-	}
-	ft_strdel(&current);
-}
+# define GNL_BUFF_SIZE 42
+
+int		get_next_line(const int fd, char **line);
+
+#endif
