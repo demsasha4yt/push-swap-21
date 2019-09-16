@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:49:46 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 22:35:38 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 00:37:53 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include "operations.h"
 
 void	initialize_stacks(int argc, char **argv, t_stack **a, t_stack **b);
+void	initialize_args(int argc, char **argv, t_stack **a, t_stack **b);
 int		*initialize_count(int count);
 void	ps_destroy(t_stack **a, t_stack **b, t_pushswap **ps);
 void	destroy_content(t_list **alst);
@@ -37,5 +38,7 @@ int		get_flag(const char *content);
 
 void	algo_quicksort(t_stack **a, t_stack **b, t_pushswap **ps);
 int		get_pivot(t_stack *a, int count);
+int		is_valid_number(char *str);
+int		is_valid_arg(char *arg);
 
 #endif

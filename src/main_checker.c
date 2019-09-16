@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/16 23:50:57 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 00:00:37 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ int			main(int argc, char **argv)
 	{
 		if (!ft_strcmp(current, "Error"))
 			error(&a, &b, NULL);
-		ft_printf("checker %s\n", current);
 		handle_operation(&a, &b, current);
 	}
 	ft_strdel(&current);

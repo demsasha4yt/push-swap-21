@@ -17,6 +17,8 @@ SRCS =		./src/main_ps.c\
 			./src/utils/push_swap_destroy.c\
 			./src/utils/merge_commands.c\
 			./src/utils/print_result.c\
+			./src/utils/validations.c\
+			./src/utils/initialize_args.c\
 			./src/operations/operations.c\
 			./src/algo_quicksort/algo_quicksort.c\
 			./src/algo_quicksort/quicksort_utils.c\
@@ -29,7 +31,9 @@ SRCS2 =		./src/main_checker.c\
 			./src/t_stack/t_stack_methods.c\
 			./src/operations/operations.c\
 			./src/utils/push_swap_initialize.c\
-			./src/utils/push_swap_destroy.c
+			./src/utils/push_swap_destroy.c\
+			./src/utils/validations.c\
+			./src/utils/initialize_args.c\
 
 OBJS = $(patsubst %.c,%.o, $(SRCS))
 OBJS2 = $(patsubst %.c,%.o, $(SRCS2))
