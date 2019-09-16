@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 00:25:45 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:40:14 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 01:02:31 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,28 +24,47 @@ static void	initialize_from_argv(int argc, char **argv,
 {
 	int		i;
 	int		num;
-	char	**args;
 
 	i = 1;
 	while (i < argc)
 	{
 		if (*argv[i] == '\0')
 			error(a, NULL, NULL);
-		args = ft_strsplit(argv[i], ' ');
 		num = put_number(a, argv[i]);
 		if (exist(*b, num))
 			error(a, b, NULL);
 		push(b, num);
 		i++;
 	}
-	while (*b != NULL)
+}
+
+static void initialize_from_str(char *str, t_stack **a, t_stack **b)
+{
+	char	**numbers;
+	char	**ptr;
+	int		num;
+
+	numbers = ft_strsplit(str, ' ');
+	ptr = numbers;
+	while (ptr)
 	{
-		push(a, (*b)->number);
-		pop(b);
+		num = put_number(a, *ptr);
+		ptr++;
+		if (exist(*b, num))
+			error(a, b, NULL);
+		push(b, num);
 	}
 }
 
 void		initialize_args(int argc, char **argv, t_stack **a, t_stack **b)
 {
-	initialize_from_argv(argc, argv, a, b);
+	if (argc == 2 && !ft_isnum(argv[1], 10))
+		initialize_from_str(argv[1], a, b);
+	else
+		initialize_from_argv(argc, argv, a, b);
+	while (*b != NULL)
+	{
+		push(a, (*b)->number);
+		pop(b);
+	}
 }
