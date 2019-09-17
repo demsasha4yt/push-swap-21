@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:49:46 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:37:53 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 12:14:01 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	destroy_content(t_list **alst);
 void	error(t_stack **a, t_stack **b, t_pushswap **ps);
 
 void	basic_3sort(t_stack **a, t_pushswap **ps);
+void	basic_5sort(t_stack **a, t_stack **b, t_pushswap **ps);
 void	basic_sort(t_stack **a, t_stack **b, t_pushswap **ps);
 void	rev_b(t_stack **a, t_stack **b, t_pushswap **ps, int count_b);
 

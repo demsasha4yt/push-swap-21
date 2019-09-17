@@ -22,6 +22,7 @@ L_SDL = `$(D_SDL)/sdl2-config --cflags --libs`
 
 SRCS =		./src/main_ps.c\
 			./src/t_stack/t_stack.c\
+			./src/t_stack/t_stack_minmax.c\
 			./src/t_stack/t_stack_methods.c\
 			./src/utils/push_swap_initialize.c\
 			./src/utils/push_swap_destroy.c\
@@ -102,4 +103,5 @@ fclean: clean
 	make -C $(LIBFT_DIR) fclean
 	rm -rf $(EXECUTABLE1)
 	rm -rf $(EXECUTABLE2)
+	rm -rf $(D_SDL)
 re: fclean all
