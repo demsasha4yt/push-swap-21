@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 06:28:32 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 11:17:07 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ static void	handle_dual_operation(t_stack **a, t_stack **b, char *operation)
 		command_s(*a, NULL, NULL);
 		command_s(*b, NULL, NULL);
 	}
-	if (!ft_strcmp(operation, "rr"))
+	else if (!ft_strcmp(operation, "rr"))
 	{
 		command_r(a, NULL, NULL);
 		command_r(b, NULL, NULL);
 	}
-	if (!ft_strcmp(operation, "rrr"))
+	else if (!ft_strcmp(operation, "rrr"))
 	{
 		command_rr(a, NULL, NULL);
 		command_rr(b, NULL, NULL);

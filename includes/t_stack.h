@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 19:41:05 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 03:28:03 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 08:52:54 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ int					is_all_sorted(t_stack *a);
 void				print_stack(t_stack *a);
 int					stack_get_length(t_stack *a);
 int					*stack_to_array(t_stack *a);
+int					stack_get_max(t_stack *a);
+int					stack_get_min(t_stack *a);
 
 #endif
