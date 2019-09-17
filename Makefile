@@ -7,8 +7,6 @@ IFLAGS=-I ./includes -I ./libft/includes
 LDFLAGS=
 
 LIBFT_DIR=./libft
-SDL_DIR=./SDL2/build/build/.libs/
-SDL_INCLUDES=./SDL2/include
 LIBFT_INCLUDE_DIR=$(LIBFT_DIR)/includes
 INCLUDE_DIR=./includes
 
@@ -62,7 +60,7 @@ checker: $(OBJS2)
 	make -C $(LIBFT_DIR)
 	@echo "===>Libft has been builded!"
 	@echo "===>Building $(EXECUTABLE2)"
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $(EXECUTABLE2) $(OBJS2) -lm -L $(LIBFT_DIR) -lft  -L ${SDL_DIR} -lSDL2 -I ${SDL_INCLUDES}
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $(EXECUTABLE2) $(OBJS2) -lm -L $(LIBFT_DIR) -lft
 	@echo "===>$(EXECUTABLE2) has been builded"
 
 %.o: %.c

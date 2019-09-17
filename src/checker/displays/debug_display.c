@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 03:51:41 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 04:12:46 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:23:17 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ static void	print_stacks(t_history *history)
 		i++;
 	}
 	ft_printf("%.10c\n", '-');
-
 }
 
 void		debug_display(t_checker *checker, t_stack **a, t_stack **b)
