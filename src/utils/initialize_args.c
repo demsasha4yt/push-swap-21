@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 00:25:45 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 01:34:50 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:28:54 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	initialize_from_argv(int argc, char **argv,
 	}
 }
 
-static void initialize_from_str(char *str, t_stack **a, t_stack **b)
+static void	initialize_from_str(char *str, t_stack **a, t_stack **b)
 {
 	char	**numbers;
 	char	**ptr;

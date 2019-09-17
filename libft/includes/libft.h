@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 18:16:42 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 01:12:29 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:28:01 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int				ft_putchar_fd(char c, int fd);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_isspace(int c);
-
 
 /*
 	** Double functions

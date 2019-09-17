@@ -6,12 +6,11 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 00:43:11 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:46:22 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:26:39 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_isnum(char *str, int base)
 {

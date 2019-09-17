@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 02:57:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 03:31:57 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:30:07 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ t_history	*get_last_node(t_checker *checker)
 	return (result);
 }
 
-void		add_to_history(t_checker *checker, t_stack *a, t_stack *b, char *cmd)
+void		add_to_history(t_checker *checker, t_stack *a,
+	t_stack *b, char *cmd)
 {
 	t_history	*last_node;
 	t_history	*new_node;
@@ -69,11 +70,11 @@ static void	history_node_clear(t_history *node)
 	node = NULL;
 }
 
-void	history_clear(t_checker *checker)
+void		history_clear(t_checker *checker)
 {
 	t_history	*current;
 
-	while(checker->history)
+	while (checker->history)
 	{
 		current = checker->history;
 		checker->history = checker->history->next;

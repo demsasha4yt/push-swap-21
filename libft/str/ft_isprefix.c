@@ -6,12 +6,11 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 00:45:33 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:46:18 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:26:13 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_isprefix(const char *str, int base)
 {
