@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 08:33:18 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 11:34:32 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 11:42:15 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	handle_key_down(t_visualizer *visualizer, SDL_Keycode key)
 		visualizer->checker->history = visualizer->header;
 		render(visualizer, visualizer->checker->history);
 	}
-
 }
 
 void	handle_key_up(t_visualizer *visualizer, SDL_Keycode key)
