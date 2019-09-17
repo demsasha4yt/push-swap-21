@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 02:57:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 03:24:53 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 03:31:57 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ t_history	*create_history_node(t_stack *a, t_stack *b, char *cmd)
 	node->prev = NULL;
 	node->next = NULL;
 	node->cmd = ft_strdup(cmd);
-	(void)a;
-	(void)b;
+	node->a_state = stack_to_array(a);
+	node->a_cnt = stack_get_length(a);
+	node->b_state = stack_to_array(b);
+	node->b_cnt = stack_get_length(b);
 	return (node);
 }
 
@@ -48,11 +50,12 @@ void		add_to_history(t_checker *checker, t_stack *a, t_stack *b, char *cmd)
 	{
 		last_node = get_last_node(checker);
 		new_node = create_history_node(a, b, cmd);
+		new_node->prev = last_node;
 		last_node->next = new_node;
 	}
 }
 
-void		history_node_clear(t_history *node)
+static void	history_node_clear(t_history *node)
 {
 	free(node->cmd);
 	free(node->a_state);

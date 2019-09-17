@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/01 20:55:28 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 02:48:21 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 03:27:29 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,20 @@ int			stack_get_length(t_stack *a)
 		a = a->next;
 	}
 	return (i);
+}
+
+int			*stack_to_array(t_stack *a)
+{
+	int	*array;
+	int	i;
+
+	array = (int*)malloc(sizeof(int) * stack_get_length(a));
+	i = 0;
+	while (a)
+	{
+		array[i] = a->number;
+		i++;
+		a = a->next;
+	}
+	return (array);
 }

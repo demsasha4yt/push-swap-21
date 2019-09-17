@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 02:49:16 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 03:43:22 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,29 +55,37 @@ static void	handle_operation(t_stack **a, t_stack **b, char *operation)
 		handle_dual_operation(a, b, operation);
 }
 
+void		count_stacks(t_checker *checker, t_stack **a, t_stack **b)
+{
+	char		*current;
+	current = NULL;
+	while (get_next_line(0, &current))
+	{
+		if (!ft_strcmp(current, "Error"))
+			error(a, b, NULL);
+		handle_operation(a, b, current);
+		add_to_history(checker, *a, *b, current);
+		ft_strdel(&current);
+	}
+}
+
 int			main(int argc, char **argv)
 {
 	t_stack		*a;
 	t_stack		*b;
 	t_checker	checker;
-	char		*current;
 
 	a = NULL;
 	b = NULL;
-	current = NULL;
+
 	if (argc < 2)
 		exit(0);
 	checker = initialize_checker(argc, argv, &a, &b);
-	while (get_next_line(0, &current))
-	{
-		if (!ft_strcmp(current, "Error"))
-			error(&a, &b, NULL);
-		handle_operation(&a, &b, current);
-	}
-	ft_strdel(&current);
+	count_stacks(&checker, &a, &b);
 	if (is_all_sorted(a) && stack_get_length(b) == 0)
 		ft_printf("OK\n");
 	else
 		ft_printf("Error\n");
+	destroy_checker(&checker);
 	ps_destroy(&a, &b, NULL);
 }

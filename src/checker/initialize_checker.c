@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 02:26:22 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 02:42:25 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 03:35:58 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ t_checker	initialize_checker(int argc, char **argv, t_stack **a, t_stack **b)
 	checker.v_option = 0;
 	checker.c_option = 0;
 	checker.d_option = 0;
+	checker.history = NULL;
 
 	options_cnt = parse_options(&checker, argc, argv);
 	argv += options_cnt;
