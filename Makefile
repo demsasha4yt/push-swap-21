@@ -7,6 +7,8 @@ IFLAGS=-I ./includes -I ./libft/includes
 LDFLAGS=
 
 LIBFT_DIR=./libft
+SDL_DIR=./SDL2/build/build/.libs/
+SDL_INCLUDES=./SDL2/include
 LIBFT_INCLUDE_DIR=$(LIBFT_DIR)/includes
 INCLUDE_DIR=./includes
 
@@ -33,6 +35,7 @@ SRCS2 =		./src/main_checker.c\
 			./src/checker/displays/display.c\
 			./src/checker/displays/default_display.c\
 			./src/checker/displays/debug_display.c\
+			./src/checker/displays/color_display.c\
 			./src/t_stack/t_stack.c\
 			./src/t_stack/t_stack_methods.c\
 			./src/operations/operations.c\
@@ -59,7 +62,7 @@ checker: $(OBJS2)
 	make -C $(LIBFT_DIR)
 	@echo "===>Libft has been builded!"
 	@echo "===>Building $(EXECUTABLE2)"
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $(EXECUTABLE2) $(OBJS2) -lm -L $(LIBFT_DIR) -lft
+	$(CC) $(LDFLAGS) $(CFLAGS) -o $(EXECUTABLE2) $(OBJS2) -lm -L $(LIBFT_DIR) -lft  -L ${SDL_DIR} -lSDL2 -I ${SDL_INCLUDES}
 	@echo "===>$(EXECUTABLE2) has been builded"
 
 %.o: %.c
