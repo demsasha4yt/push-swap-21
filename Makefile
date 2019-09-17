@@ -30,6 +30,9 @@ SRCS2 =		./src/main_checker.c\
 			./src/checker/initialize_checker.c\
 			./src/checker/destroy_checker.c\
 			./src/checker/t_history/t_history.c\
+			./src/checker/displays/display.c\
+			./src/checker/displays/default_display.c\
+			./src/checker/displays/debug_display.c\
 			./src/t_stack/t_stack.c\
 			./src/t_stack/t_stack_methods.c\
 			./src/operations/operations.c\

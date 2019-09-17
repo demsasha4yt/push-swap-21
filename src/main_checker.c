@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 03:43:22 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 04:08:15 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void		count_stacks(t_checker *checker, t_stack **a, t_stack **b)
 {
 	char		*current;
 	current = NULL;
+	add_to_history(checker, *a, *b, "init");
 	while (get_next_line(0, &current))
 	{
 		if (!ft_strcmp(current, "Error"))
@@ -67,6 +68,7 @@ void		count_stacks(t_checker *checker, t_stack **a, t_stack **b)
 		add_to_history(checker, *a, *b, current);
 		ft_strdel(&current);
 	}
+	add_to_history(checker, *a, *b, "done");
 }
 
 int			main(int argc, char **argv)
@@ -82,10 +84,7 @@ int			main(int argc, char **argv)
 		exit(0);
 	checker = initialize_checker(argc, argv, &a, &b);
 	count_stacks(&checker, &a, &b);
-	if (is_all_sorted(a) && stack_get_length(b) == 0)
-		ft_printf("OK\n");
-	else
-		ft_printf("Error\n");
+	display(&checker, &a, &b);
 	destroy_checker(&checker);
 	ps_destroy(&a, &b, NULL);
 }
