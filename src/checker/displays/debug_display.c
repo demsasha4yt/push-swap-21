@@ -6,7 +6,7 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 03:51:41 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 06:23:17 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 06:38:07 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ void		debug_display(t_checker *checker, t_stack **a, t_stack **b)
 	if (is_all_sorted(*a) && stack_get_length(*b) == 0)
 		ft_printf("OK\n");
 	else
-		ft_printf("Error\n");
+		ft_printf("KO\n");
 }
