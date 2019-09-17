@@ -6,12 +6,11 @@
 /*   By: bharrold <bharrold@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 13:58:13 by bharrold          #+#    #+#             */
-/*   Updated: 2019/09/17 00:00:37 by bharrold         ###   ########.fr       */
+/*   Updated: 2019/09/17 02:49:16 by bharrold         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "get_next_line.h"
+#include "checker.h"
 
 static void	handle_dual_operation(t_stack **a, t_stack **b, char *operation)
 {
@@ -30,6 +29,8 @@ static void	handle_dual_operation(t_stack **a, t_stack **b, char *operation)
 		command_rr(a, NULL, NULL);
 		command_rr(b, NULL, NULL);
 	}
+	else
+		error(a, b, NULL);
 }
 
 static void	handle_operation(t_stack **a, t_stack **b, char *operation)
@@ -56,14 +57,17 @@ static void	handle_operation(t_stack **a, t_stack **b, char *operation)
 
 int			main(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
-	char	*current;
+	t_stack		*a;
+	t_stack		*b;
+	t_checker	checker;
+	char		*current;
 
 	a = NULL;
 	b = NULL;
 	current = NULL;
-	initialize_stacks(argc, argv, &a, &b);
+	if (argc < 2)
+		exit(0);
+	checker = initialize_checker(argc, argv, &a, &b);
 	while (get_next_line(0, &current))
 	{
 		if (!ft_strcmp(current, "Error"))
@@ -71,5 +75,9 @@ int			main(int argc, char **argv)
 		handle_operation(&a, &b, current);
 	}
 	ft_strdel(&current);
+	if (is_all_sorted(a) && stack_get_length(b) == 0)
+		ft_printf("OK\n");
+	else
+		ft_printf("Error\n");
 	ps_destroy(&a, &b, NULL);
 }

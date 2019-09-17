@@ -27,6 +27,8 @@ SRCS =		./src/main_ps.c\
 
 SRCS2 =		./src/main_checker.c\
 			./src/checker/get_next_line.c\
+			./src/checker/initialize_checker.c\
+			./src/checker/t_history/t_history.c\
 			./src/t_stack/t_stack.c\
 			./src/t_stack/t_stack_methods.c\
 			./src/operations/operations.c\
